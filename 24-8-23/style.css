@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    text-align: left;
+}
+
+header h1 {
+    flex: content;
+    margin-left: 10px;
+}
+
+header ul {
+    text-align: center;
+    justify-items: center;
+    list-style: none;
+    display: flex;
+    width: fit-content;
+    margin: 25px 10px;
+    padding: 0;
+
+}
+
+header ul li{
+    font-size: 12px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px 25px;
+    margin-right: 7px ;
+    cursor: pointer;
+}
+
+
+.container {
+    width: 400vw;
+    height: 300px;
+    display: flex;
+    background-color: white;
+    transition: transform 0.5s;
+    border-top: 1px solid black;
+}
+
+.inner {
+    width: 100vw;
+    float: left;
+    display: flex;
+    justify-content: center;
+
+}
+
+.inner div img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.inner div {
+    height: 100%;
+    background-color: white;
+    margin-top: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+}
+
+.btn-group { 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+
+
+}
+
+.btn-group button {
+    width: 12px;
+    height: 5px;
+    border: 0px white;
+    background-color: rgb(145, 145, 145);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.menu {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid;
+}
+
+.menu-btn {
+    text-align: right;
+    cursor: pointer;
+    padding: 10px
+}
