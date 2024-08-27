@@ -6,6 +6,7 @@
     <title>Document</title>
     <style>
     body {
+        justify-content: ;
         width: 100%;
         height: 100%;
         margin: 0;
@@ -102,17 +103,18 @@
     </style>
 </head>
 <body>
-    <header>
+    <!-- 헤더 -->
+    <header role="menu">
         <h1>goorm.log</h1>
-        <nav>
-            <ul class="nav-ul">
+        <nav role="tab">
+            <ul role="list" class="nav-ul">
                 <li>새 글 작성</li>
                 <li class="li-profile"></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <aside class="aside-ul">
+    <main role="main">
+        <aside role="list" class="aside-ul">
             <h3>태그 목록</h3>
             <hr>
             <ul>
@@ -123,9 +125,9 @@
                 <li>React (192)</li>
             </ul>
         </aside>
-        <section>
-            <article>
-                <div style="
+        <section role="list">
+            <article role="article">
+                <div role="img" style="
                     width: 80%;
                     height: 400px;
                     background-color: rgb(63, 215, 154);
@@ -146,3 +148,5 @@
     </footer>
 </body>
 </html>
+
+
