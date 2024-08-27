@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        div {
-            background-color: yellowgreen;
+        table {
+            border: 2px solid gray;
+            border-collapse: collapse;
         }
-        .div-none {
-            display: none;
+        th, td {
+            padding: 5px 10px;
+            border: 1px solid gray;
         }
-        span {
-            background-color: palevioletred;
+        td {
+            cursor: pointer;
+        }
+        th:first-child {
+            background-color:hotpink;
+        }
+        td:hover {
+            color: gray;
+            background-color:pink;
         }
     </style>
 </head>
 <body>
-    <h1>디스플레이 알아보기</h1>
-        <!-- 블록 요소 div로 확인 -->
-        <div>블록 요소는 너비를 차지합니다</div>
-        <div class="div-none">이 블록은 보이지 않고, 차지하지 않습니다</div>
-        <!-- 인라인 요소 span으로 확인 -->
-        <span>인라인 요소는 부분만 차지합니다</span>
+    <table>
+        <tr>
+            <th scope="col">9oorn DEEP DIVE</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+        </tr>
+        <tr>
+            <td>JS</td>
+        </tr>
+    </table>
 </body>
 </html>
