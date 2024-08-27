@@ -6,22 +6,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .container span {
-            background-color: aqua;
-        }
-        .container > span {
-            width: 300px;
+        div {
             background-color: yellowgreen;
+        }
+        .div-none {
+            display: none;
+        }
+        span {
+            background-color: palevioletred;
         }
     </style>
 </head>
 <body>
-    <h1>자손 결합자와 자식 결합자</h1>
-    <div class="container">
-        <span>자식(>) 결합자는?</span>
-        <div>
-            <span>자손("")결합자는?</span>
-        </div>
-    </div>
+    <h1>디스플레이 알아보기</h1>
+        <!-- 블록 요소 div로 확인 -->
+        <div>블록 요소는 너비를 차지합니다</div>
+        <div class="div-none">이 블록은 보이지 않고, 차지하지 않습니다</div>
+        <!-- 인라인 요소 span으로 확인 -->
+        <span>인라인 요소는 부분만 차지합니다</span>
 </body>
 </html>
