@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center; padding-top: 30px;">
+    <div>
+        <h1 style="border: 3px solid gray; padding: 10px 30px; border-radius: 30px">숫자를 더해 볼까요?</h1>
+        <div id="btn-group"
+        style="display: flex; justify-content: center; gap: 3px;">
+        </div>
+        <div id="num-arr"
+        style="display: flex; justify-content: center; margin-top: 100px;">
+        </div>
+        <div id="result-btn"
+        style="display: flex; justify-content: center; margin-top: 100px;">
+        </div>
+    </div>
+    <script>
+        const btnGroup = document.getElementById('btn-group');
+        const numArr = document.getElementById('num-arr');
+        const result = document.getElementById('result-btn');
+
+        const arr = []
+
+        
+
+        // 1에서 9까지 배열 생성
+        const numbers = Array.from({length: 9}, (_, i) => i+1);
+
+        // map을 사용하여 1에서 9까지 버튼 생성
+        numbers.map((number) => {
+            const newButton = document.createElement('button');
+            newButton.textContent = `${number}`;
+            newButton.addEventListener('click', () => {
+                if(arr.length >= 5) {
+                    alert('더 이상 숫자를 추가하지 마세요!');
+                } else {
+                    if(arr.length === 4) {
+                        showResult();
+                    }
+                    arr.push(number);
+                    updateArr();
+                }
+                
+                console.log(arr);
+            });
+            btnGroup.appendChild(newButton);
+        });
+
+        function updateArr() {
+            numArr.innerHTML = ''
+            arr.map((v, i) => {
+            const array = document.createElement('span');
+            array.textContent = `, ${v}`;
+            if(i === 0) {
+                array.textContent = `${v}`;
+            }
+            
+            numArr.appendChild(array);
+            })
+        }
+
+        function showResult () {
+            const resultBtn = document.createElement('button');
+            resultBtn.innerHTML = '결과 보기';
+            result.addEventListener('click', ()=> {
+                const res = arr.reduce((acc, cur) => acc+cur);
+                alert(`${res}입니다!`);
+                location.reload();
+            })
+            result.appendChild(resultBtn);
+        }
+    </script>
+</body>
+</html>
